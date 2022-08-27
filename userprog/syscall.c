@@ -48,13 +48,9 @@ void syscall_init (void) {
   list_init (&open_files); 					   
 }
 
-
-static void syscall_handler (struct intr_frame *f)
-{
-if (!is_valid_ptr (esp) || !is_valid_ptr (esp + 1) || !is_valid_ptr (esp + 2)
-		|| !is_valid_ptr (esp + 3))
-    {
-		exit(-1);
+static void syscall_handler (struct intr_frame *f){
+if (!is_valid_ptr (esp) || !is_valid_ptr (esp + 1) || !is_valid_ptr (esp + 2) || !is_valid_ptr (esp + 3)){
+    exit(-1);
     }
 	
 	else{
