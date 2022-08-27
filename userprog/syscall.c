@@ -86,21 +86,18 @@ if (!is_valid_ptr (esp) || !is_valid_ptr (esp + 1) || !is_valid_ptr (esp + 2) ||
 		else if (syscall_number == SYS_CREATE){
             f->eax = create((char *) *(esp + 1), *(esp + 2));
         }
-        else if (syscall_number == SYS_EXEC)
-        {
+        else if (syscall_number == SYS_EXEC){
             f->eax = exec((char *) *(esp + 1));
         }
         else if (syscall_number == SYS_WAIT){
             f->eax = wait(*(esp + 1));
         }
-        else if (syscall_number == SYS_SEEK)
-        {
+        else if (syscall_number == SYS_SEEK){
             seek(*(esp + 1), *(esp + 2));
         }
         else{
             break;
         }
-		
 	}
 }
 	
