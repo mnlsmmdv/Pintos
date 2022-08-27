@@ -59,8 +59,8 @@ if (!is_valid_ptr (esp) || !is_valid_ptr (esp + 1) || !is_valid_ptr (esp + 2) ||
 		if (syscall_number == SYS_HALT){
             halt();
         }
-        else if (syscall_number == SYS_EXIT) {
-          exit(*(esp + 1));
+        else if (syscall_number == SYS_EXIT){
+            exit(*(esp + 1));
         }
         else if (syscall_number == SYS_REMOVE){
             f->eax = remove((char *) *(esp + 1));
