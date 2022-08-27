@@ -453,7 +453,6 @@ void exit(int status){
     thread_exit();
 }
 
-
 /*
 function - remove()
 in this function is used to remove the file
@@ -488,5 +487,4 @@ unsigned tell(int fd){
 
     return current_state 
 }
-
 // end of system calls										   
