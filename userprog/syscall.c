@@ -317,7 +317,7 @@ int write(int fd, const void *buffer, unsigned size){
         present_current_state = size;
     }
 
-    else {
+    else{
         discription_of_file = get_open_file(fd);
 
         if (discription_of_file != NULL)
