@@ -28,20 +28,20 @@ static int allocate_fd (void);
 
 //start system call functions 
 static void halt(void);
-static bool create(const char*, unsigned);
-static int open(const char *);
-static void close(int);
-static int read(int, void *, unsigned);
-static int write(int, const void *, unsigned);
-static pid_t exec(const char *);
-static int wait(pid_t);
-static void seek(int, unsigned);
-static int filesize(int);
-static void exit(int);
-static bool remove(const char *);
-static unsigned tell(int);
-
+static bool create(const char *file, unsigned initial_size);
+static int open(const char *file);
+static void close(int fd);
+static int read(int fd, void *buffer, unsigned size);
+static int write(int fd, const void *buffer, unsigned size);
+static pid_t exec(const char *cmd_line);
+static int wait(pid_t pid);
+static void seek(int fd, unsigned current_state);
+static int filesize(int fd);
+static void exit(int status);
+static bool remove(const char *file);
+static unsigned tell(int fd);
 // end system call functions
+
 void syscall_init (void) {
   intr_register_int (0x30, 3, INTR_ON, syscall_handler, "syscall");
     lock_init (&fs_lock);
