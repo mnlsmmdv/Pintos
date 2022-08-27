@@ -341,8 +341,7 @@ pid_t exec(const char *cmd_line){
     struct thread *present_thread;
 
     //validates the pointer
-    if (!is_valid_ptr(cmd_line))
-    {
+    if (!is_valid_ptr(cmd_line)){
         exit(-1);
     }
 
