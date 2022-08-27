@@ -9,4 +9,4 @@ Ammar Abdul Rahman (ammar2.rahman@live.uwe.ac.uk)
 
 Ahmed Affan (ahmed2.affan@live.uwe.ac.uk)
 
-Aminath Muzna (aminath3.muzna@live.uwe.ac.uk)
+Aminath Muzuna (aminath3.muzuna@live.uwe.ac.uk)
