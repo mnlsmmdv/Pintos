@@ -206,7 +206,7 @@ int read(int fd, void *buffer, unsigned size){
         if (!is_valid_uvaddr(temporary_buffer))
         exit (-1);
 
-        if (pagedir_get_page(t->pagedir, temporary_buffer) == NULL)   { 
+        if (pagedir_get_page(t->pagedir, temporary_buffer) == NULL){ 
             struct suppl_pte *spte;
 
             spte = get_suppl_pte(&t->suppl_page_table, pg_round_down(temporary_buffer));
